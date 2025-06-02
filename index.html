@@ -4,10 +4,43 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Mapa de México</title>
+    <link rel="stylesheet" href="/style.css" />
   </head>
-  <body>
-    <div id="app"></div>
+  <body class="flex flex-col bg-black text-white">
+    <!-- Barra de navegación -->
+    <div
+      class="flex self-center gap-x-10 bg-white text-black p-6 w-96 rounded-full m-5 shadow-lg z-10 relative"
+    >
+      <a href="/" class="text-xl">Inicio</a>
+    </div>
+
+    <!-- Canvas para Three.js -->
+    <div
+      id="canvas-container"
+      class="fixed top-0 left-0 w-screen h-screen -z-10 pointer-events-none"
+    ></div>
+
+    <!-- Secciones para scroll -->
+    <section
+      class="page h-screen flex items-center justify-center"
+      data-scene="0"
+    >
+      <h1 class="text-5xl">Escena 1</h1>
+    </section>
+    <section
+      class="page h-screen flex items-center justify-center"
+      data-scene="1"
+    >
+      <h1 class="text-5xl">Escena 2</h1>
+    </section>
+    <section
+      class="page h-screen flex items-center justify-center"
+      data-scene="2"
+    >
+      <h1 class="text-5xl">Escena 3</h1>
+    </section>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
